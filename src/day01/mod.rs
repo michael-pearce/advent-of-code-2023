@@ -2,6 +2,7 @@ use crate::utils::read_lines;
 use std::collections::HashMap;
 use std::io::BufRead;
 
+#[allow(dead_code)]
 pub fn main() {
     let raw_line = read_lines("src/day01/input.txt");
     let num_map = HashMap::from([
