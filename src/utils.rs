@@ -10,3 +10,13 @@ where
     let file: File = File::open(filename)?;
     Ok(io::BufReader::new(file))
 }
+
+#[allow(dead_code)]
+pub fn print_grid(grid: &Vec<Vec<char>>) {
+    for row in grid {
+        for item in row.iter() {
+            print!("{}", item);
+        }
+        println!();
+    }
+}
