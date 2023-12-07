@@ -132,7 +132,7 @@ fn build_map(map_lines: &Vec<Vec<u64>>) -> Vec<Range> {
 
 fn map_range(
     rules: &Vec<Range>,
-    map_name: String,
+    _map_name: String,
     queue: &mut Vec<Seed>,
     processed: &mut Vec<Seed>,
 ) {
@@ -143,7 +143,7 @@ fn map_range(
         let mut curr_seed = queue.pop().unwrap();
         let mut curr_seed_consumed = false;
 
-        for (k, range) in rules.iter().enumerate() {
+        for (_k, range) in rules.iter().enumerate() {
             // case 1: seed is fully within source range, is consumed and we skip the remaining rules by moving to the next seed
             if range.s_range.contains(&curr_seed.s_start)
                 && range.s_range.contains(&curr_seed.s_end)
