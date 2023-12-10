@@ -1,9 +1,6 @@
 use crate::utils::read_lines;
 use counter::Counter;
-use std::{
-    collections::HashMap,
-    io::{BufRead, BufReader},
-};
+use std::{collections::HashMap, io::BufRead};
 
 #[derive(Debug, Clone)]
 struct Game {
